@@ -36,15 +36,15 @@
                 </ul>
 
 
-                <form action="index.php" method="post">
+                <div>
                     <div class=" d-flex ">
                         <input type="text" v-model="newTask" name="task" id="task" class="form-control rounded-1  "
                             placeholder="Add a new task" aria-describedby="taskHelper">
 
-                        <button type="submit" @click="writeTask"
+                        <button @click="writeTask"
                             class="p-3 btn btn-prymary text-warning bg-dark border border-warning">Inserisci</button>
                     </div>
-                </form>
+                </div>
             </div>
 
         </div>

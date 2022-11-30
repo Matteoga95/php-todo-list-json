@@ -20,11 +20,14 @@ createApp({
                     console.error(err.message);
                 })
         },
-        writeTask(url) {
+        writeTask() {
             axios
-                .post(url, {
+                .post(this.api_url, {
                     newTask: this.newTask
-                })
+                }, {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }
+                )
                 .then(response => {
                     console.log(response);
 
@@ -33,10 +36,13 @@ createApp({
                     console.error(err.message);
                 })
 
+            //adesso pulisco la nuova task
+            // this.newTask = "";
+
         }
     },
     mounted() {
         this.readTasks(this.api_url);
-        this.writeTask(this.api_url);
+
     }
 }).mount('#app')
