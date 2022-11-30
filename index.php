@@ -1,8 +1,8 @@
 <?php
 
-var_dump($_POST['task']);
+// var_dump($_POST['task']);
 
-var_dump($tasks);
+// var_dump($tasks);
 
 ?>
 
@@ -38,10 +38,10 @@ var_dump($tasks);
 
                 <form action="index.php" method="post">
                     <div class=" d-flex ">
-                        <input type="text" name="task" id="task" class="form-control rounded-1  "
+                        <input type="text" v-model="newTask" name="task" id="task" class="form-control rounded-1  "
                             placeholder="Add a new task" aria-describedby="taskHelper">
 
-                        <button type="submit"
+                        <button type="submit" @click="writeTask"
                             class="p-3 btn btn-prymary text-warning bg-dark border border-warning">Inserisci</button>
                     </div>
                 </form>

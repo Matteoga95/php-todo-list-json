@@ -15,3 +15,5 @@ $tasks = json_decode($tasks_string);
 
 header('Content-Type: application/json');
 echo json_encode($tasks);
+
+var_dump($_POST['newTask']);
